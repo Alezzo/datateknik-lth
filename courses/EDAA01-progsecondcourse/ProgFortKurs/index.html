@@ -95,11 +95,25 @@ dubblettförbudet.</p>
 
 <p>Några metoder som kan vara bra att känna till:</p>
 
-<p>|                                      |                                                                                       |
-|--------------------------------------|---------------------------------------------------------------------------------------|
-| <code>boolean add(E obj)</code>                 | Lägger till obj om det inte redan finns                                               |
-| <code>boolean addAll(Collection&lt;E&gt; coll)</code> | Lägger till alla element om de inte redan finns, returnerar true om set:et är ändrat. |
-| <code>boolean contains(Object obj)</code>       | Returnerar true om set:et innehåller ett element som är identiskt(equal) till obj     |</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>boolean add(E obj)</code></td>
+<td>Lägger till obj om det inte redan finns</td>
+</tr>
+<tr>
+<td><code>boolean addAll(Collection&lt;E&gt; coll)</code></td>
+<td>Lägger till alla element om de inte redan finns, returnerar true om set:et är ändrat.</td>
+</tr>
+<tr>
+<td><code>boolean contains(Object obj)</code></td>
+<td>Returnerar true om set:et innehåller ett element som är identiskt(equal) till obj</td>
+</tr>
+</tbody></table>
 
 <h1>Interfacet Comparator</h1>
 
@@ -162,11 +176,25 @@ kommer att vara sorterade)</p></li>
 
 <p>Några metoder som kan vara bra att känna till:</p>
 
-<p>|                         |                                                                          |
-|-------------------------|--------------------------------------------------------------------------|
-| <code>V get(Object key)</code>     | Returnerar värdet associerat med key. Returnerar null om det inte finns. |
-| <code>V put(K key, V value)</code> | Associerar key med value i denna mapen. Dvs lägger till i mapen.         |
-| <code>V remove(Object key)</code>  | Tar bort objektet med nyckeln key i mapen.                               |</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>V get(Object key)</code></td>
+<td>Returnerar värdet associerat med key. Returnerar null om det inte finns.</td>
+</tr>
+<tr>
+<td><code>V put(K key, V value)</code></td>
+<td>Associerar key med value i denna mapen. Dvs lägger till i mapen.</td>
+</tr>
+<tr>
+<td><code>V remove(Object key)</code></td>
+<td>Tar bort objektet med nyckeln key i mapen.</td>
+</tr>
+</tbody></table>
 
 <h1>Hashtabell</h1>
 
@@ -426,13 +454,33 @@ ungefär fyra gånger fler jämförelser för att sortera elementen.</p>
 
 <h2>Sammanfattning sortering</h2>
 
-<p>|                               |                                                                                                                                                                       |
-|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Urvalssortering $O(n^2)$      | Långsam för stora n. Efter k pass är de k minsta sorterade.                                                                                                           |
-| Insättningssortering $O(n^2)$ | Bra för nästan sorterad indata (linjär då).                                                                                                                           |
-| Heapsort $O(n \log n)$        | Kan utformas så att inget extra minnesutrymme krävs. I praktiken långsammare än Quicksort. Efter k pass är de k största elementen sorterade.                          |
-| Mergesort $O(n\log n)$        | Kräver extra minnesutrymme. I praktiken långsammare än Quicksort. Kan utformas iterativa och användas för att sortera element som finns på fil.                       |
-| Quicksort $O(n \log n)$       | Men $O(n^2)$ i värsta fall. Inget extra minnesutrymme för temporär vektor krävs. Bäst av de nämnda i praktiken om man väljer pivot och utför partionering förnuftigt. |</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Urvalssortering $O(n^2)$</td>
+<td>Långsam för stora n. Efter k pass är de k minsta sorterade.</td>
+</tr>
+<tr>
+<td>Insättningssortering $O(n^2)$</td>
+<td>Bra för nästan sorterad indata (linjär då).</td>
+</tr>
+<tr>
+<td>Heapsort $O(n \log n)$</td>
+<td>Kan utformas så att inget extra minnesutrymme krävs. I praktiken långsammare än Quicksort. Efter k pass är de k största elementen sorterade.</td>
+</tr>
+<tr>
+<td>Mergesort $O(n\log n)$</td>
+<td>Kräver extra minnesutrymme. I praktiken långsammare än Quicksort. Kan utformas iterativa och användas för att sortera element som finns på fil.</td>
+</tr>
+<tr>
+<td>Quicksort $O(n \log n)$</td>
+<td>Men $O(n^2)$ i värsta fall. Inget extra minnesutrymme för temporär vektor krävs. Bäst av de nämnda i praktiken om man väljer pivot och utför partionering förnuftigt.</td>
+</tr>
+</tbody></table>
 
 <h1>Lista</h1>
 
@@ -496,11 +544,25 @@ Analogi: En (vanlig) kö när man handlar mat på ICA...</p>
 
 <p>Några metoder som kan vara bra att känna till:</p>
 
-<p>|                         |                                                           |
-|-------------------------|-----------------------------------------------------------|
-| <code>boolean offer(E item)</code> | Sätter in item sist i kön.                                |
-| <code>E poll()</code>              | Tar bort och returnerar första elementet i kön            |
-| <code>peek</code>                  | Returnerar första elementet i kön (utan att ta bort det). |</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>boolean offer(E item)</code></td>
+<td>Sätter in item sist i kön.</td>
+</tr>
+<tr>
+<td><code>E poll()</code></td>
+<td>Tar bort och returnerar första elementet i kön</td>
+</tr>
+<tr>
+<td><code>peek</code></td>
+<td>Returnerar första elementet i kön (utan att ta bort det).</td>
+</tr>
+</tbody></table>
 
 <h2>Prioritetskö</h2>
 
@@ -532,12 +594,29 @@ Analogi: En tallriks dispenser, en hög med papper.</p>
 
 <p>Några metoder som kan vara bra att känna till:</p>
 
-<p>|                                     |                                                           |
-|-------------------------------------|-----------------------------------------------------------|
-| <code>void push(E obj)</code>                  | Lägger obj överst på stacken.                             |
-| <code>E pop()</code>                           | Tar bort och returnerar översta elementet från stacken.   |
-| <code>E peek()</code>                          | Returnerar första elementet i kön (utan att ta bort det). |
-| <code>boolean isEmpty()</code>                 | Undersöker om stacken är tom.                             |</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>void push(E obj)</code></td>
+<td>Lägger obj överst på stacken.</td>
+</tr>
+<tr>
+<td><code>E pop()</code></td>
+<td>Tar bort och returnerar översta elementet från stacken.</td>
+</tr>
+<tr>
+<td><code>E peek()</code></td>
+<td>Returnerar första elementet i kön (utan att ta bort det).</td>
+</tr>
+<tr>
+<td><code>boolean isEmpty()</code></td>
+<td>Undersöker om stacken är tom.</td>
+</tr>
+</tbody></table>
 
 <h1>Heap</h1>
 
@@ -596,24 +675,73 @@ klasser för samlingar av element.</p></li>
 
 <p>JFC - interface hieraki</p>
 
-<p>|            |                                                                                                                   |
-|------------|-------------------------------------------------------------------------------------------------------------------|
-| Collection | en samling av element, där dubbletter tillåts                                                                     |
-| Queue      | en samling av element som utgör en kö                                                                             |
-| List       | en samling element där dubbletter tillåts och där positionerna är möjlig (första, sista, element på plats i, ...) |
-| Set        | en samling element där dubbletter är förbjudna                                                                    |
-| SortedSet  | som Set men med kravet att elementen går att jämföra                                                              |
-| Map        | en samling element där varje element har en nyckel och ett värde                                                  |
-| SortedMap  | som Map men med krav att nycklarna går att jämföra                                                                |</p>
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Collection</td>
+<td>en samling av element, där dubbletter tillåts</td>
+</tr>
+<tr>
+<td>Queue</td>
+<td>en samling av element som utgör en kö</td>
+</tr>
+<tr>
+<td>List</td>
+<td>en samling element där dubbletter tillåts och där positionerna är möjlig (första, sista, element på plats i, ...)</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>en samling element där dubbletter är förbjudna</td>
+</tr>
+<tr>
+<td>SortedSet</td>
+<td>som Set men med kravet att elementen går att jämföra</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>en samling element där varje element har en nyckel och ett värde</td>
+</tr>
+<tr>
+<td>SortedMap</td>
+<td>som Map men med krav att nycklarna går att jämföra</td>
+</tr>
+</tbody></table>
 
-<p>| Interface | Implementering            |
-|-----------|---------------------------|
-| Queue     | LinkedList, PriorityQueue |
-| List      | ArrayList, LinkedList     |
-| Set       | HashSet                   |
-| SortedSet | TreeSet                   |
-| Map       | HashMap                   |
-| SortedMap | TreeMap                   |</p>
+<table><thead>
+<tr>
+<th>Interface</th>
+<th>Implementering</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Queue</td>
+<td>LinkedList, PriorityQueue</td>
+</tr>
+<tr>
+<td>List</td>
+<td>ArrayList, LinkedList</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>HashSet</td>
+</tr>
+<tr>
+<td>SortedSet</td>
+<td>TreeSet</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>HashMap</td>
+</tr>
+<tr>
+<td>SortedMap</td>
+<td>TreeMap</td>
+</tr>
+</tbody></table>
 
 <h1>Klassen Object</h1>
 
@@ -676,15 +804,41 @@ Exempel:</p>
 
 <p>Storleksordning för funktioner:</p>
 
-<p>| $f(n)$     | namn         |
-|------------|--------------|
-| $1$        | konstant     |
-| $\log n$   | logaritmisk  |
-| $n$        | linjär       |
-| $n \log n$ | log-linjär   |
-| $n^2$      | kvadratisk   |
-| $n^3$      | kubisk       |
-| $2^n$      | exponentiell |</p>
+<table><thead>
+<tr>
+<th>$f(n)$</th>
+<th>namn</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$1$</td>
+<td>konstant</td>
+</tr>
+<tr>
+<td>$\log n$</td>
+<td>logaritmisk</td>
+</tr>
+<tr>
+<td>$n$</td>
+<td>linjär</td>
+</tr>
+<tr>
+<td>$n \log n$</td>
+<td>log-linjär</td>
+</tr>
+<tr>
+<td>$n^2$</td>
+<td>kvadratisk</td>
+</tr>
+<tr>
+<td>$n^3$</td>
+<td>kubisk</td>
+</tr>
+<tr>
+<td>$2^n$</td>
+<td>exponentiell</td>
+</tr>
+</tbody></table>
 
 <h2>Tidskomplexitet för några algoritmer</h2>
 

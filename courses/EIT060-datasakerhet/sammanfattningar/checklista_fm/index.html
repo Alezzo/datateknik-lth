@@ -151,13 +151,45 @@ another user</li>
 <li>Crypts</li>
 </ul>
 
-<p>|                 |  DES crypt    |  MD5 crypt   | bcrypt        |
-| --------------- | ------------- | ------------ | ------------- |
-| Password length |  Max 8 chars  |  Infinity    | max 72 chars  |
-| Salt length     |  12 bits      |  12-48 bits  | 128 bits      |
-| Variable cost   |  No           |  No          | Yes           |
-| Evals/sec       |  1 000 000    |  10 000      | 450           |
-| Conclusions     |  Fast         |              | Safe          |</p>
+<table><thead>
+<tr>
+<th></th>
+<th>DES crypt</th>
+<th>MD5 crypt</th>
+<th>bcrypt</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Password length</td>
+<td>Max 8 chars</td>
+<td>Infinity</td>
+<td>max 72 chars</td>
+</tr>
+<tr>
+<td>Salt length</td>
+<td>12 bits</td>
+<td>12-48 bits</td>
+<td>128 bits</td>
+</tr>
+<tr>
+<td>Variable cost</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Evals/sec</td>
+<td>1 000 000</td>
+<td>10 000</td>
+<td>450</td>
+</tr>
+<tr>
+<td>Conclusions</td>
+<td>Fast</td>
+<td></td>
+<td>Safe</td>
+</tr>
+</tbody></table>
 
 <ul>
 <li><strong>/etc/shadow-file:</strong> saves password in hashed form along with:

@@ -16,7 +16,7 @@
     <h1>Datateknik LTH</h1>
     <a href="https://github.com/datateknik-lth/datateknik-lth" class="button"><small>Visa på</small> GitHub</a>
     
-    <h2><a class="nav-link" href="../../../">Kurser</a> / <a class="nav-link" href="../">EDAA05-dis</a> / Sammanfattning-Felix Mulder</h2>
+    <h2><a class="nav-link" href="../../../">Kurser</a> / <a class="nav-link" href="../">EDAA05-dis</a> / Sammanfattning-Felix_Mulder</h2>
   </div>
 </header>
 
@@ -37,11 +37,25 @@ UTF-8,16,32 som använts och ifall det är big endian eller little
 endian. BE:00 46, LE: 46 00.\</p></li>
 </ul>
 
-<p>| <strong>BOM</strong>  | <strong>Teckenkodning</strong> |
-| ---------|-------------------|
-| FE FF    | UTF-16BE          |
-| FF FE    | UTF-16LE          |
-| EF BB FF | UTF-8             |</p>
+<table><thead>
+<tr>
+<th><strong>BOM</strong></th>
+<th><strong>Teckenkodning</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>FE FF</td>
+<td>UTF-16BE</td>
+</tr>
+<tr>
+<td>FF FE</td>
+<td>UTF-16LE</td>
+</tr>
+<tr>
+<td>EF BB FF</td>
+<td>UTF-8</td>
+</tr>
+</tbody></table>
 
 <p>I UTF-32XX lägger man antingen till 00 00 framför eller bakom :)</p>
 
@@ -77,16 +91,54 @@ sanningstabell för ifall de får plats eller ej som tabellen nedan
 visar:</p></li>
 </ul>
 
-<p>| <strong>Decimalt</strong> | <strong>$2^x$</strong>   | <strong>Får plats</strong> |
-|--------------|-------------|---------------|
-| 78           | 128 ($2^7$) | 0             |
-| 78           | 64 ($2^6$)  | 1             |
-| 14           | 32 ($2^5$)  | 0             |
-| 14           | 16 ($2^4$)  | 0             |
-| 14           |  8 ($2^3$)  | 1             |
-| 6            |  4 ($2^2$)  | 1             |
-| 2            |  2 ($2^1$)  | 1             |
-| 0            |  1 ($2^0$)  | 0             |</p>
+<table><thead>
+<tr>
+<th><strong>Decimalt</strong></th>
+<th><strong>$2^x$</strong></th>
+<th><strong>Får plats</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>78</td>
+<td>128 ($2^7$)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>78</td>
+<td>64 ($2^6$)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>14</td>
+<td>32 ($2^5$)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>14</td>
+<td>16 ($2^4$)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>14</td>
+<td>8 ($2^3$)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>4 ($2^2$)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2 ($2^1$)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1 ($2^0$)</td>
+<td>0</td>
+</tr>
+</tbody></table>
 
 <p>Den binära formen blir alltså sanningstabellen uppifrån och ner.</p>
 
@@ -111,16 +163,72 @@ funktionen är sann skriver vi ett uttryck och sammaskriver dem med
 hjälp av ett $\lor$-tecken.</p></li>
 </ul>
 
-<p>| x | y | z | f |                                 | 
-|---|---|---|---|---------------------------------|
-| 0 | 0 | 0 | 0 |                                 |
-| 0 | 0 | 1 | 0 |                                 |
-| 0 | 1 | 0 | 1 | $\lnot x \land y \land \lnot z$ |
-| 0 | 1 | 1 | 0 |                                 |
-| 1 | 0 | 0 | 1 | $x \land \lnot y \land \lnot z$ |
-| 1 | 0 | 1 | 0 |                                 | 
-| 1 | 1 | 0 | 1 | $x \land y \land \lnot z$       |
-| 1 | 1 | 1 | 0 |                                 |</p>
+<table><thead>
+<tr>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+<th>f</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>$\lnot x \land y \land \lnot z$</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>$x \land \lnot y \land \lnot z$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>$x \land y \land \lnot z$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody></table>
 
 <p>Vi får då genom ovanstående regel uttrycket:</p>
 
